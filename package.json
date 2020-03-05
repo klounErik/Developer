@@ -6,14 +6,16 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "concurrently": "^5.1.0",
     "gh-pages": "^2.2.0",
+    "nodemon": "^2.0.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },
-  "homepage": "",
+  "homepage": "https://klounerik.github.io/Developer/",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "concurrently \"npm run build\" \"cd server && nodemon server\"",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
